@@ -1,0 +1,27 @@
+;
+; Archivo BIND para zona [TU DOMINIO]
+;
+$TTL    604800
+@       IN      SOA     [TU DOMINIO] hostmaster.[TU DOMINIO]. (
+                1       ; Serial
+                           1200         ; Refresh
+                            300         ; Retry
+                        2419200         ; Expire
+                           1200 )       ; Negative Cache TTL
+
+[TU DOMINIO]        		IN      NS      [TU NS, REGULARMENTE LA MAQUINA DONDE SE EJECUTA LA APLICACION]
+
+localhost         		IN      A       127.0.0.1
+[TU DOMINIO]          		IN      A       [TU IP]
+
+ns1             		IN      A   	[TU IP]
+                              
+www             		IN      A   	[TU IP]
+code				IN	A	{IP_SITE}
+correo				IN	A	{IP_SITE}
+pi				IN	A	{IP_HOME}
+router				IN	A 	{IP_HOME}
+frankay5			IN	A   	{IP_HOME}
+;redireccion gmail
+@                    	IN 	MX      1 aspmx.l.google.com. 
+;---- FIN --
